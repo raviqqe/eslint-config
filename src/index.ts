@@ -7,7 +7,6 @@ const eslintConfig: Linter.Config = {
     "jest/globals": true,
   },
   extends: [
-    "react-app",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
@@ -31,9 +30,9 @@ const eslintConfig: Linter.Config = {
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmafeatures: { jsx: true },
+    ecmaFeatures: { jsx: true },
     project: "tsconfig.json",
-    sourcetype: "module",
+    sourceType: "module",
   },
   plugins: [
     "@typescript-eslint",
@@ -50,19 +49,19 @@ const eslintConfig: Linter.Config = {
     "@typescript-eslint/naming-convention": [
       "error",
       {
-        custom: { match: true, regex: "^i[a-z]" },
-        format: ["pascalcase"],
+        custom: { match: true, regex: "^I[A-Z]" },
+        format: ["PascalCase"],
         selector: "interface",
       },
     ],
     "@typescript-eslint/no-empty-interface": [
       "error",
-      { allowsingleextends: true },
+      { allowSingleExtends: true },
     ],
     "@typescript-eslint/no-require-imports": "error",
     "@typescript-eslint/no-unused-vars": [
       "error",
-      { argsignorepattern: "^_", varsignorepattern: "^_" },
+      { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
     ],
     "@typescript-eslint/prefer-readonly": "error",
     "arrow-body-style": "error",
@@ -74,7 +73,7 @@ const eslintConfig: Linter.Config = {
     "lines-between-class-members": [
       "error",
       "always",
-      { exceptaftersingleline: true },
+      { exceptAfterSingleLine: true },
     ],
     "no-console": "error",
     "no-duplicate-imports": "error",
