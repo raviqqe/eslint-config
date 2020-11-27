@@ -1,5 +1,6 @@
 {
   "name": "@raviqqe/eslint-config",
+  "description": "eslint configuration",
   "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
