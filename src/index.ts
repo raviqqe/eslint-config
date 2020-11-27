@@ -83,6 +83,7 @@ const eslintConfig: Linter.Config = {
     "no-useless-return": "error",
     "react/jsx-curly-brace-presence": "error",
     "react/jsx-sort-props": "error",
+    "react/react-in-jsx-scope": "off",
     "sort-keys": "error",
   },
   settings: {
