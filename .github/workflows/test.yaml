@@ -1,0 +1,12 @@
+name: test
+on:
+  - push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: node:lts
+    steps:
+      - uses: actions/checkout@main
+      - run: npm install
+      - run: npm run build

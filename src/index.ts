@@ -7,6 +7,7 @@ const eslintConfig: Linter.Config = {
     "jest/globals": true,
   },
   extends: [
+    "react-app",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
