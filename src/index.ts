@@ -1,4 +1,6 @@
-export const eslintOptions: Linter.Config = {
+import { Linter } from "eslint";
+
+const eslintConfig: Linter.Config = {
   env: {
     browser: true,
     es6: true,
@@ -27,7 +29,7 @@ export const eslintOptions: Linter.Config = {
     },
   ],
   parser: "@typescript-eslint/parser",
-  parseroptions: {
+  parserOptions: {
     ecmafeatures: { jsx: true },
     project: "tsconfig.json",
     sourcetype: "module",
