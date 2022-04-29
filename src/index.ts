@@ -64,6 +64,7 @@ const eslintConfig: Linter.Config = {
       "error",
       { allowConstantLoopConditions: true },
     ],
+    "@typescript-eslint/no-unnecessary-type-arguments": "error",
     "@typescript-eslint/no-unused-vars": [
       "error",
       { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
