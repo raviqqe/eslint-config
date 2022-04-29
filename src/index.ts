@@ -59,6 +59,11 @@ const eslintConfig: Linter.Config = {
       { allowSingleExtends: true },
     ],
     "@typescript-eslint/no-require-imports": "error",
+    "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
+    "@typescript-eslint/no-unnecessary-condition": [
+      "error",
+      { allowConstantLoopConditions: true },
+    ],
     "@typescript-eslint/no-unused-vars": [
       "error",
       { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
