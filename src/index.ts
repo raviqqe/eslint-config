@@ -60,7 +60,7 @@ const eslintConfig: Linter.Config = {
     ],
     "@typescript-eslint/no-misused-promises": [
       "error",
-      { checksVoidReturn: { attributes: false } },
+      { checksVoidReturn: { attributes: false, properties: false } },
     ],
     "@typescript-eslint/no-require-imports": "error",
     "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
