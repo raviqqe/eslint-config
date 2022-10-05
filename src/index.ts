@@ -4,6 +4,7 @@ const eslintConfig: Linter.Config = {
   env: {
     browser: true,
     es6: true,
+    "jest/globals": true,
   },
   extends: [
     "eslint:recommended",
@@ -11,6 +12,7 @@ const eslintConfig: Linter.Config = {
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
+    "plugin:jest/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
@@ -32,7 +34,14 @@ const eslintConfig: Linter.Config = {
     project: "tsconfig.json",
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint", "import", "prettier", "react", "react-hooks"],
+  plugins: [
+    "@typescript-eslint",
+    "import",
+    "jest",
+    "prettier",
+    "react",
+    "react-hooks",
+  ],
   rules: {
     "@typescript-eslint/array-type": "error",
     "@typescript-eslint/consistent-type-definitions": "error",
