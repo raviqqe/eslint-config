@@ -20,7 +20,7 @@ const eslintConfig: Linter.Config = {
   ],
   overrides: [
     {
-      files: ["**/__tests__/*.ts{,x}"],
+      files: ["**/*.test.ts{,x}", "**/__tests__/*.ts{,x}"],
       rules: {
         "@typescript-eslint/no-empty-function": "off",
         "@typescript-eslint/require-await": "off",
