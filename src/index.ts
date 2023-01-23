@@ -36,6 +36,7 @@ const eslintConfig: Linter.Config = {
   rules: {
     "@typescript-eslint/array-type": "error",
     "@typescript-eslint/consistent-type-definitions": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "error",
     "@typescript-eslint/member-ordering": "error",
     "@typescript-eslint/naming-convention": [
       "error",
