@@ -39,8 +39,13 @@ const eslintConfig: Linter.Config = {
     "@typescript-eslint/explicit-member-accessibility": [
       "error",
       {
+        accessibility: "explicit",
         overrides: {
+          accessors: "explicit",
           constructors: "off",
+          methods: "explicit",
+          properties: "explicit",
+          parameterProperties: "explicit",
         },
       },
     ],
