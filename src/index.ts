@@ -75,6 +75,7 @@ const eslintConfig: Linter.Config = {
     ],
     "@typescript-eslint/prefer-readonly": "error",
     "arrow-body-style": "error",
+    curly: "error",
     "dot-notation": "error",
     "import/no-cycle": "error",
     "import/no-default-export": "error",
