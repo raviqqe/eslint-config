@@ -10,6 +10,7 @@ const eslintConfig: Linter.Config = {
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
@@ -99,7 +100,6 @@ const eslintConfig: Linter.Config = {
     "no-useless-return": "error",
     "react/jsx-curly-brace-presence": "error",
     "react/jsx-sort-props": "error",
-    "react/react-in-jsx-scope": "off",
     "sort-keys": "error",
   },
   settings: {
