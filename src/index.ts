@@ -98,6 +98,7 @@ const eslintConfig: Linter.Config = {
     "no-lonely-if": "error",
     "no-return-await": "error",
     "no-useless-return": "error",
+    quotes: ["error", "double", { allowTemplateLiterals: false }],
     "react/jsx-curly-brace-presence": "error",
     "react/jsx-sort-props": "error",
     "sort-keys": "error",
