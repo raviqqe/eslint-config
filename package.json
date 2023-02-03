@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "test": "npm run prepare && eslint --config dist/index.js 'src/**.ts'"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.38.1",
