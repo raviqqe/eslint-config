@@ -104,9 +104,9 @@ const eslintConfig: Linter.Config = {
       { allowTemplateLiterals: false, avoidEscape: true },
     ],
     "react/jsx-curly-brace-presence": "error",
+    "react/jsx-no-useless-fragment": "error",
     "react/jsx-sort-props": "error",
     "react/no-unescaped-entities": "off",
-    "react/jsx-no-useless-fragment": "error",
     "sort-keys": "error",
   },
   settings: {
