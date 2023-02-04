@@ -106,6 +106,7 @@ const eslintConfig: Linter.Config = {
     "react/jsx-curly-brace-presence": "error",
     "react/jsx-sort-props": "error",
     "react/no-unescaped-entities": "off",
+    "react/jsx-no-useless-fragment": "error",
     "sort-keys": "error",
   },
   settings: {
