@@ -22,6 +22,7 @@ const eslintConfig: Linter.Config = {
       files: ["**/*.test.ts{,x}", "**/__tests__/*.ts{,x}"],
       rules: {
         "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
         "@typescript-eslint/require-await": "off",
         "@typescript-eslint/unbound-method": "off",
       },
