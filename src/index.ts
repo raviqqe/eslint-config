@@ -19,7 +19,11 @@ const eslintConfig: Linter.Config = {
   ],
   overrides: [
     {
-      files: ["**/*.test.ts{,x}", "**/__tests__/*.ts{,x}"],
+      files: [
+        "**/*.test.ts{,x}",
+        "**/__tests__/*.ts{,x}",
+        "**/test/**/*.test.ts{,x}",
+      ],
       rules: {
         "@typescript-eslint/no-empty-function": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
