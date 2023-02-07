@@ -22,7 +22,7 @@ const eslintConfig: Linter.Config = {
       files: [
         "**/*.test.ts{,x}",
         "**/__tests__/*.ts{,x}",
-        "**/test/**/*.test.ts{,x}",
+        "**/test/**/*.ts{,x}",
       ],
       rules: {
         "@typescript-eslint/no-empty-function": "off",
