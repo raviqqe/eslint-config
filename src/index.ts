@@ -90,6 +90,7 @@ const eslintConfig: Linter.Config = {
     "dot-notation": "error",
     "import/no-cycle": "error",
     "import/no-default-export": "error",
+    "import/no-named-as-default": "error",
     "import/no-unused-modules": "error",
     "import/order": ["error", { alphabetize: { order: "asc" } }],
     "lines-between-class-members": [
