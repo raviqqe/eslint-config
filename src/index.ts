@@ -103,6 +103,7 @@ const eslintConfig: Linter.Config = {
     "no-lonely-if": "error",
     "no-return-await": "error",
     "no-useless-return": "error",
+    "object-shorthand": "error",
     quotes: [
       "error",
       "double",
