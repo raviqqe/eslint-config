@@ -12,10 +12,12 @@ const eslintConfig: Linter.Config = {
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
     "plugin:prettier/recommended",
+    "plugin:eslint-comments/recommended",
   ],
   overrides: [
     {
@@ -38,7 +40,15 @@ const eslintConfig: Linter.Config = {
     project: "tsconfig.json",
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint", "import", "prettier", "react", "react-hooks"],
+  plugins: [
+    "@typescript-eslint",
+    "import",
+    "prettier",
+    "react",
+    "react-hooks",
+    "jsx-a11y",
+    "eslint-comments",
+  ],
   rules: {
     "@typescript-eslint/array-type": "error",
     "@typescript-eslint/consistent-type-definitions": "error",
@@ -88,6 +98,7 @@ const eslintConfig: Linter.Config = {
     "arrow-body-style": "error",
     curly: "error",
     "dot-notation": "error",
+    "eslint-comments/no-unused-disable": "error",
     "import/no-cycle": "error",
     "import/no-default-export": "error",
     "import/no-named-as-default": "error",
