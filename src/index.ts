@@ -98,6 +98,7 @@ const eslintConfig: Linter.Config = {
     "arrow-body-style": "error",
     curly: "error",
     "dot-notation": "error",
+    "eslint-comments/no-unused-disable": "error",
     "import/no-cycle": "error",
     "import/no-default-export": "error",
     "import/no-named-as-default": "error",
