@@ -128,6 +128,9 @@ const eslintConfig: Linter.Config = {
     "sort-keys": "error",
   },
   settings: {
+    "import/resolver": {
+      typescript: true,
+    },
     react: {
       version: "detect",
     },
