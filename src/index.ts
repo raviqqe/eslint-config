@@ -47,6 +47,7 @@ const eslintConfig: Linter.Config = {
     "react",
     "react-hooks",
     "jsx-a11y",
+    "canonical",
     "eslint-comments",
   ],
   rules: {
@@ -96,6 +97,7 @@ const eslintConfig: Linter.Config = {
     ],
     "@typescript-eslint/prefer-readonly": "error",
     "arrow-body-style": "error",
+    "canonical/no-unused-exports": ["error", { tsConfigPath: "tsconfig.json" }],
     curly: "error",
     "dot-notation": "error",
     "eslint-comments/no-unused-disable": "error",
