@@ -101,7 +101,11 @@ const eslintConfig: Linter.Config = {
     curly: "error",
     "dot-notation": "error",
     "eslint-comments/no-unused-disable": "error",
-    "import/extensions": ["error", "always", { ignorePackages: true }],
+    "import/extensions": [
+      "error",
+      "always",
+      { ignorePackages: true, ts: "never", tsx: "never" },
+    ],
     "import/no-cycle": "error",
     "import/no-default-export": "error",
     "import/no-named-as-default": "error",
