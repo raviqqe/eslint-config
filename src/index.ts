@@ -1,4 +1,4 @@
-import type { Linter } from "eslint";
+import { Linter } from "eslint";
 
 const eslintConfig: Linter.Config = {
   env: {
@@ -53,7 +53,10 @@ const eslintConfig: Linter.Config = {
   rules: {
     "@typescript-eslint/array-type": "error",
     "@typescript-eslint/consistent-type-definitions": "error",
-    "@typescript-eslint/consistent-type-imports": "error",
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      { fixStyle: "inline-type-imports" },
+    ],
     "@typescript-eslint/explicit-member-accessibility": [
       "error",
       {
