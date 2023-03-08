@@ -55,7 +55,7 @@ const eslintConfig: Linter.Config = {
     "@typescript-eslint/consistent-type-definitions": "error",
     "@typescript-eslint/consistent-type-imports": [
       "error",
-      { fixStyle: "inline-type-imports" },
+      { disallowTypeAnnotations: false, fixStyle: "inline-type-imports" },
     ],
     "@typescript-eslint/explicit-member-accessibility": [
       "error",
