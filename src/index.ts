@@ -129,6 +129,7 @@ const eslintConfig: Linter.Config = {
       { allowTemplateLiterals: false, avoidEscape: true },
     ],
     "react-hooks/exhaustive-deps": "error",
+    "react/jsx-boolean-value": "error",
     "react/jsx-curly-brace-presence": "error",
     "react/jsx-no-useless-fragment": "error",
     "react/jsx-sort-props": "error",
