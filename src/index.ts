@@ -74,7 +74,24 @@ const eslintConfig: Linter.Config = {
     ],
     "@typescript-eslint/explicit-module-boundary-types": "error",
     "@typescript-eslint/member-ordering": "error",
-    "@typescript-eslint/naming-convention": "error",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        format: ["camelCase"],
+        leadingUnderscore: "allow",
+        selector: "default",
+      },
+
+      {
+        format: ["camelCase", "PascalCase", "UPPER_CASE"],
+        leadingUnderscore: "allow",
+        selector: "variable",
+      },
+      {
+        format: ["PascalCase"],
+        selector: "typeLike",
+      },
+    ],
     "@typescript-eslint/no-empty-interface": [
       "error",
       { allowSingleExtends: true },
