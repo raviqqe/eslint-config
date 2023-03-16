@@ -1,5 +1,7 @@
 import { type Linter } from "eslint";
 
+/* eslint-disable @typescript-eslint/naming-convention */
+
 const eslintConfig: Linter.Config = {
   env: {
     browser: true,
@@ -138,5 +140,7 @@ const eslintConfig: Linter.Config = {
     },
   },
 };
+
+/* eslint-enable @typescript-eslint/naming-convention */
 
 module.exports = eslintConfig;
