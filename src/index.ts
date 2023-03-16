@@ -72,14 +72,7 @@ const eslintConfig: Linter.Config = {
     ],
     "@typescript-eslint/explicit-module-boundary-types": "error",
     "@typescript-eslint/member-ordering": "error",
-    "@typescript-eslint/naming-convention": [
-      "error",
-      {
-        custom: { match: true, regex: "^I[A-Z]" },
-        format: ["PascalCase"],
-        selector: "interface",
-      },
-    ],
+    "@typescript-eslint/naming-convention": "error",
     "@typescript-eslint/no-empty-interface": [
       "error",
       { allowSingleExtends: true },
