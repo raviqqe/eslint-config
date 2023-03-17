@@ -81,11 +81,14 @@ const eslintConfig: Linter.Config = {
         leadingUnderscore: "allow",
         selector: "default",
       },
-
       {
         format: ["camelCase", "PascalCase", "UPPER_CASE"],
         leadingUnderscore: "allow",
         selector: "variable",
+      },
+      {
+        format: ["PascalCase"],
+        selector: "enumMember",
       },
       {
         format: ["PascalCase"],
