@@ -24,6 +24,7 @@ const eslintConfig: Linter.Config = {
   overrides: [
     {
       files: [
+        "**/test.ts{,x}",
         "**/*.test.ts{,x}",
         "**/__tests__/*.ts{,x}",
         "**/test/**/*.ts{,x}",
