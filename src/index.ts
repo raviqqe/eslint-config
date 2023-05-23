@@ -30,11 +30,11 @@ const eslintConfig: Linter.Config = {
         "**/test/**/*.ts{,x}",
       ],
       rules: {
-        "require-yield": "off",
         "@typescript-eslint/no-empty-function": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
         "@typescript-eslint/require-await": "off",
         "@typescript-eslint/unbound-method": "off",
+        "require-yield": "off",
       },
     },
   ],
