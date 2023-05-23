@@ -9,3 +9,15 @@ jobs:
       - run: npm install
       - run: npm run build
       - run: npm run test
+  spell_check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: streetsidesoftware/cspell-action@main
+        with:
+          files: "**/*.{md,ts}"
+  readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: raviqqe/markdown-link-check@main
