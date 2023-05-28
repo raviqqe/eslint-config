@@ -1,10 +1,13 @@
 {
   "name": "@raviqqe/eslint-config",
   "description": "eslint configuration",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "main": "dist/index.js",
   "license": "MIT",
   "repository": "https://github.com/raviqqe/eslint-config",
+  "publishConfig": {
+    "provenance": true
+  },
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
