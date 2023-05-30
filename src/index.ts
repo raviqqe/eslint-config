@@ -56,6 +56,10 @@ const eslintConfig: Linter.Config = {
   rules: {
     "@typescript-eslint/array-type": "error",
     "@typescript-eslint/consistent-type-definitions": "error",
+    "@typescript-eslint/consistent-type-exports": [
+      "error",
+      { fixMixedExportsWithInlineTypeSpecifier: true },
+    ],
     "@typescript-eslint/consistent-type-imports": [
       "error",
       { disallowTypeAnnotations: false, fixStyle: "inline-type-imports" },
