@@ -54,7 +54,10 @@ const eslintConfig: Linter.Config = {
     "eslint-comments",
   ],
   rules: {
+    "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/array-type": "error",
+    "@typescript-eslint/consistent-indexed-object-style": "error",
+    "@typescript-eslint/consistent-type-assertions": "error",
     "@typescript-eslint/consistent-type-definitions": "error",
     "@typescript-eslint/consistent-type-exports": [
       "error",
@@ -104,6 +107,8 @@ const eslintConfig: Linter.Config = {
       "error",
       { allowSingleExtends: true },
     ],
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-meaningless-void-operator": "error",
     "@typescript-eslint/no-misused-promises": [
       "error",
       { checksVoidReturn: { attributes: false, properties: false } },
@@ -119,7 +124,10 @@ const eslintConfig: Linter.Config = {
       "error",
       { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
     ],
+    "@typescript-eslint/prefer-optional-chain": "error",
     "@typescript-eslint/prefer-readonly": "error",
+    "@typescript-eslint/prefer-return-this-type": "error",
+    "@typescript-eslint/prefer-ts-expect-error": "error",
     "arrow-body-style": "error",
     curly: "error",
     "dot-notation": "error",
