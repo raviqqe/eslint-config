@@ -43,7 +43,7 @@ const eslintConfig: Linter.Config = {
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: { jsx: true },
-    project: "tsconfig.json",
+    project: true,
     sourceType: "module",
   },
   plugins: [
