@@ -33,6 +33,7 @@ const eslintConfig: Linter.Config = {
       ],
       rules: {
         "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
         "@typescript-eslint/require-await": "off",
         "@typescript-eslint/unbound-method": "off",
