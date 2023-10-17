@@ -11,7 +11,7 @@ import eslint from "eslint";
 /* eslint-disable @typescript-eslint/naming-convention */
 
 const configurations: Linter.FlatConfig[] = [
-  typescript.configs["recommended"],
+  typescript.configs.recommended,
   typescript.configs["recommended-type-checked"],
   typescript.configs["stylistic"],
   typescript.configs["stylistic-type-checked"],
@@ -19,10 +19,6 @@ const configurations: Linter.FlatConfig[] = [
   {
     extends: [
       "eslint:recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:@typescript-eslint/recommended-type-checked",
-      "plugin:@typescript-eslint/stylistic",
-      "plugin:@typescript-eslint/stylistic-type-checked",
       "plugin:react/recommended",
       "plugin:react/jsx-runtime",
       "plugin:react-hooks/recommended",
