@@ -179,7 +179,7 @@ const configurations: Linter.FlatConfig[] = [
         version: "detect",
       },
     },
-  },
+  } satisfies Linter.FlatConfig,
 ];
 
 export default configurations;
