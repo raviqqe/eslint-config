@@ -1,12 +1,15 @@
 import { type Linter } from "eslint";
 import typescript from "@typescript-eslint/eslint-plugin";
+// @ts-expect-error
 import importPlugin from "eslint-plugin-import";
 import prettier from "eslint-plugin-prettier";
+// @ts-expect-error
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
+// @ts-expect-error
 import jsxA11y from "eslint-plugin-jsx-a11y";
+// @ts-expect-error
 import comments from "eslint-plugin-eslint-comments";
-import eslint from "eslint";
 
 /* eslint-disable @typescript-eslint/naming-convention */
 
