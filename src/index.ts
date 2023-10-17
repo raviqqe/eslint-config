@@ -5,6 +5,7 @@ import importPlugin from "eslint-plugin-import";
 import prettier from "eslint-plugin-prettier";
 // @ts-expect-error
 import react from "eslint-plugin-react";
+// @ts-expect-error
 import reactHooks from "eslint-plugin-react-hooks";
 // @ts-expect-error
 import jsxA11y from "eslint-plugin-jsx-a11y";
