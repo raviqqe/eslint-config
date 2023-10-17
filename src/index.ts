@@ -28,24 +28,6 @@ const configurations: Linter.FlatConfig[] = [
   prettier.configs?.recommended,
   comments.configs.recommended,
   {
-    overrides: [
-      {
-        files: [
-          "**/test.ts{,x}",
-          "**/*.test.ts{,x}",
-          "**/__tests__/*.ts{,x}",
-          "**/test/**/*.ts{,x}",
-        ],
-        rules: {
-          "@typescript-eslint/no-empty-function": "off",
-          "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
-          "@typescript-eslint/no-non-null-assertion": "off",
-          "@typescript-eslint/require-await": "off",
-          "@typescript-eslint/unbound-method": "off",
-          "require-yield": "off",
-        },
-      },
-    ],
     parser: "@typescript-eslint/parser",
     parserOptions: {
       ecmaFeatures: { jsx: true },
@@ -178,6 +160,22 @@ const configurations: Linter.FlatConfig[] = [
       react: {
         version: "detect",
       },
+    },
+  } satisfies Linter.FlatConfig,
+  {
+    files: [
+      "**/test.ts{,x}",
+      "**/*.test.ts{,x}",
+      "**/__tests__/*.ts{,x}",
+      "**/test/**/*.ts{,x}",
+    ],
+    rules: {
+      "@typescript-eslint/no-empty-function": "off",
+      "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/require-await": "off",
+      "@typescript-eslint/unbound-method": "off",
+      "require-yield": "off",
     },
   } satisfies Linter.FlatConfig,
 ];
