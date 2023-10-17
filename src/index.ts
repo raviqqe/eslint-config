@@ -1,7 +1,7 @@
 import { type Linter } from "eslint";
 import typescript from "@typescript-eslint/eslint-plugin";
 // @ts-expect-error
-import importPlugin from "eslint-plugin-import";
+import * as importPlugin from "eslint-plugin-import";
 import prettier from "eslint-plugin-prettier";
 // @ts-expect-error
 import react from "eslint-plugin-react";
@@ -20,6 +20,13 @@ const configurations: Linter.FlatConfig[] = [
   typescript.configs["stylistic"],
   typescript.configs["stylistic-type-checked"],
   react.configs.recommended,
+  react.configs["jsx-runtime"],
+  jsxA11y.configs.strict,
+  importPlugin.configs.errors,
+  importPlugin.configs.warnings,
+  importPlugin.configs.typescript,
+  prettier.configs?.recommended,
+  comments.configs.recommended,
   {
     extends: [
       "eslint:recommended",
