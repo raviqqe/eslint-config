@@ -28,18 +28,6 @@ const configurations: Linter.FlatConfig[] = [
   prettier.configs?.recommended,
   comments.configs.recommended,
   {
-    extends: [
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "plugin:react/jsx-runtime",
-      "plugin:react-hooks/recommended",
-      "plugin:jsx-a11y/strict",
-      "plugin:import/errors",
-      "plugin:import/warnings",
-      "plugin:import/typescript",
-      "plugin:prettier/recommended",
-      "plugin:eslint-comments/recommended",
-    ],
     overrides: [
       {
         files: [
