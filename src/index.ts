@@ -98,6 +98,10 @@ const eslintConfig: Linter.Config = {
         selector: "variable",
       },
       {
+        format: ["camelCase", "PascalCase"],
+        selector: "import",
+      },
+      {
         format: ["PascalCase"],
         selector: "enumMember",
       },
