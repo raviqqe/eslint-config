@@ -172,7 +172,7 @@ const configurations: Linter.FlatConfig[] = [
         version: "detect",
       },
     },
-  } satisfies Linter.FlatConfig,
+  },
   {
     files: [
       "**/test.ts{,x}",
@@ -188,7 +188,7 @@ const configurations: Linter.FlatConfig[] = [
       "@typescript-eslint/unbound-method": "off",
       "require-yield": "off",
     },
-  } satisfies Linter.FlatConfig,
+  },
 ];
 
 /* eslint-enable @typescript-eslint/naming-convention */
