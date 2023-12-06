@@ -40,7 +40,7 @@ const configurations: Linter.FlatConfig[] = [
         ...globals.browser,
         ...globals.es2021,
       },
-      parser: typescriptParser as unknown as Linter.ParserModule,
+      parser: typescriptParser as Linter.ParserModule,
       parserOptions: {
         ecmaFeatures: { jsx: true },
         project: true,
