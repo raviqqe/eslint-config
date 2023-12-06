@@ -11,27 +11,6 @@ const compat = new FlatCompat();
 
 /* eslint-disable @typescript-eslint/naming-convention */
 
-const config = {
-  overrides: [
-    {
-      files: [
-        "**/test.ts{,x}",
-        "**/*.test.ts{,x}",
-        "**/__tests__/*.ts{,x}",
-        "**/test/**/*.ts{,x}",
-      ],
-      rules: {
-        "@typescript-eslint/no-empty-function": "off",
-        "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
-        "@typescript-eslint/no-non-null-assertion": "off",
-        "@typescript-eslint/require-await": "off",
-        "@typescript-eslint/unbound-method": "off",
-        "require-yield": "off",
-      },
-    },
-  ],
-};
-
 const configurations: Linter.FlatConfig[] = [
   js.configs.recommended,
   prettierConfig,
@@ -193,6 +172,22 @@ const configurations: Linter.FlatConfig[] = [
       react: {
         version: "detect",
       },
+    },
+  },
+  {
+    files: [
+      "**/test.ts{,x}",
+      "**/*.test.ts{,x}",
+      "**/__tests__/*.ts{,x}",
+      "**/test/**/*.ts{,x}",
+    ],
+    rules: {
+      "@typescript-eslint/no-empty-function": "off",
+      "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/require-await": "off",
+      "@typescript-eslint/unbound-method": "off",
+      "require-yield": "off",
     },
   },
 ];
