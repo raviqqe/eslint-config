@@ -2,7 +2,7 @@ import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import typescriptPlugin from "@typescript-eslint/eslint-plugin";
 import typescriptParser from "@typescript-eslint/parser";
-import { type Linter } from "eslint";
+import { type Linter, type ESLint } from "eslint";
 import prettierConfig from "eslint-config-prettier";
 import globals from "globals";
 
@@ -40,7 +40,7 @@ const configurations: Linter.FlatConfig[] = [
         ...globals.browser,
         ...globals.es2021,
       },
-      parser: typescriptParser as unknown as any,
+      parser: typescriptParser as unknown as Linter.ParserModule,
       parserOptions: {
         ecmaFeatures: { jsx: true },
         project: true,
@@ -48,7 +48,7 @@ const configurations: Linter.FlatConfig[] = [
       },
     },
     plugins: {
-      typescriptPlugin: typescriptPlugin as any,
+      typescriptPlugin: typescriptPlugin as unknown as ESLint.Plugin,
     },
     rules: {
       "@typescript-eslint/adjacent-overload-signatures": "error",
@@ -193,4 +193,5 @@ const configurations: Linter.FlatConfig[] = [
 
 /* eslint-enable @typescript-eslint/naming-convention */
 
+// eslint-disable-next-line no-default-export
 export default configurations;
