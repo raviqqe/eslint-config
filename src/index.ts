@@ -1,10 +1,10 @@
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
-import globals from "globals";
-import prettierConfig from "eslint-config-prettier";
-import { type Linter } from "eslint";
-import typescriptParser from "@typescript-eslint/parser";
 import typescriptPlugin from "@typescript-eslint/eslint-plugin";
+import typescriptParser from "@typescript-eslint/parser";
+import { type Linter } from "eslint";
+import prettierConfig from "eslint-config-prettier";
+import globals from "globals";
 
 const compat = new FlatCompat();
 
