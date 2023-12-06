@@ -12,7 +12,7 @@
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
-    "test": "npm run prepare && eslint --config dist/index.js 'src/**.ts'"
+    "test": "npm run prepare && eslint --config eslint.config.js 'src/**.ts'"
   },
   "dependencies": {
     "@eslint/eslintrc": "^2.1.4",
