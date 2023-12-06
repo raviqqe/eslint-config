@@ -6,6 +6,8 @@ import { type Linter } from "eslint";
 // @ts-expect-error no types
 import typescriptParser from "@typescript-eslint/parser";
 import typescriptPlugin from "@typescript-eslint/eslint-plugin";
+// @ts-expect-error no types
+import reactPlugin from "eslint-plugin-react";
 
 const compat = new FlatCompat();
 
@@ -14,6 +16,8 @@ const compat = new FlatCompat();
 const configurations: Linter.FlatConfig[] = [
   js.configs.recommended,
   prettierConfig,
+  reactPlugin.configs.recommended,
+  reactPlugin.configs["jsx-runtime"],
   ...compat.extends(
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-type-checked",
