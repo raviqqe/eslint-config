@@ -2,6 +2,7 @@
   "name": "@raviqqe/eslint-config",
   "description": "eslint configuration",
   "version": "1.2.20",
+  "type": "module",
   "main": "dist/index.js",
   "license": "MIT",
   "repository": "https://github.com/raviqqe/eslint-config",
@@ -14,6 +15,9 @@
     "test": "npm run prepare && eslint --config dist/index.js 'src/**.ts'"
   },
   "dependencies": {
+    "@eslint/eslintrc": "^2.1.4",
+    "@eslint/js": "^8.55.0",
+    "@types/eslint__js": "^8.42.3",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
     "@typescript-eslint/parser": "^6.9.0",
     "eslint-config-prettier": "^9.0.0",
@@ -28,6 +32,8 @@
   },
   "devDependencies": {
     "@types/eslint": "^8.4.6",
+    "@types/eslint__eslintrc": "^2.1.1",
+    "@types/eslint-config-prettier": "^6.11.3",
     "@types/node": "^20.0.0",
     "typescript": "^5.0.2"
   }

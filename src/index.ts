@@ -1,28 +1,17 @@
+import { FlatCompat } from "@eslint/eslintrc";
+import * as js from "@eslint/js";
+import globals from "globals";
+import prettierConfig from "eslint-config-prettier";
 import { type Linter } from "eslint";
+// @ts-expect-error no types
+import typescriptParser from "@typescript-eslint/parser";
+import typescriptPlugin from "@typescript-eslint/eslint-plugin";
+
+const compat = new FlatCompat();
 
 /* eslint-disable @typescript-eslint/naming-convention */
 
 const config = {
-  env: {
-    browser: true,
-    es6: true,
-  },
-  extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-type-checked",
-    "plugin:@typescript-eslint/stylistic",
-    "plugin:@typescript-eslint/stylistic-type-checked",
-    "plugin:react/recommended",
-    "plugin:react/jsx-runtime",
-    "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/strict",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
-    "plugin:prettier/recommended",
-    "plugin:eslint-comments/recommended",
-  ],
   overrides: [
     {
       files: [
@@ -41,33 +30,48 @@ const config = {
       },
     },
   ],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    ecmaFeatures: { jsx: true },
-    project: true,
-    sourceType: "module",
-  },
-  plugins: [
-    "@typescript-eslint",
+};
+
+const configurations: Linter.FlatConfig[] = [
+  js.configs.recommended,
+  prettierConfig,
+  ...compat.extends(
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:@typescript-eslint/stylistic",
+    "plugin:@typescript-eslint/stylistic-type-checked",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/strict",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:eslint-comments/recommended",
+  ),
+  ...compat.plugins(
     "import",
-    "prettier",
     "react",
     "react-hooks",
     "jsx-a11y",
     "eslint-comments",
-  ],
-  settings: {
-    "import/resolver": {
-      typescript: true,
-    },
-    react: {
-      version: "detect",
-    },
-  },
-};
-
-const configurations: Linter.FlatConfig[] = [
+  ),
   {
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.es2021,
+      },
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaFeatures: { jsx: true },
+        project: true,
+        sourceType: "module",
+      },
+    },
+    plugins: {
+      typescriptPlugin,
+    },
     rules: {
       "@typescript-eslint/adjacent-overload-signatures": "error",
       "@typescript-eslint/array-type": "error",
@@ -181,6 +185,14 @@ const configurations: Linter.FlatConfig[] = [
       "react/jsx-sort-props": "error",
       "react/no-unescaped-entities": "off",
       "sort-keys": "error",
+    },
+    settings: {
+      "import/resolver": {
+        typescript: true,
+      },
+      react: {
+        version: "detect",
+      },
     },
   },
 ];
