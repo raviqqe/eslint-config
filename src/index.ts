@@ -1,8 +1,7 @@
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
-import typescriptPlugin from "@typescript-eslint/eslint-plugin";
 import typescriptParser from "@typescript-eslint/parser";
-import { type Linter, type ESLint } from "eslint";
+import { type Linter } from "eslint";
 import prettierConfig from "eslint-config-prettier";
 import globals from "globals";
 
@@ -28,6 +27,7 @@ const configurations: Linter.FlatConfig[] = [
     "plugin:eslint-comments/recommended",
   ),
   ...compat.plugins(
+    "@typescript-eslint",
     "import",
     "react",
     "react-hooks",
@@ -46,9 +46,6 @@ const configurations: Linter.FlatConfig[] = [
         project: true,
         sourceType: "module",
       },
-    },
-    plugins: {
-      typescriptPlugin: typescriptPlugin as unknown as ESLint.Plugin,
     },
     rules: {
       "@typescript-eslint/adjacent-overload-signatures": "error",
