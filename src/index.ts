@@ -3,7 +3,6 @@ import * as js from "@eslint/js";
 import globals from "globals";
 import prettierConfig from "eslint-config-prettier";
 import { type Linter } from "eslint";
-// @ts-expect-error no types
 import typescriptParser from "@typescript-eslint/parser";
 import typescriptPlugin from "@typescript-eslint/eslint-plugin";
 // @ts-expect-error no types
