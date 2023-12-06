@@ -1,5 +1,5 @@
 import { FlatCompat } from "@eslint/eslintrc";
-import * as js from "@eslint/js";
+import js from "@eslint/js";
 import globals from "globals";
 import prettierConfig from "eslint-config-prettier";
 import { type Linter } from "eslint";
