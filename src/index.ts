@@ -5,8 +5,6 @@ import prettierConfig from "eslint-config-prettier";
 import { type Linter } from "eslint";
 import typescriptParser from "@typescript-eslint/parser";
 import typescriptPlugin from "@typescript-eslint/eslint-plugin";
-// @ts-expect-error no types
-import reactPlugin from "eslint-plugin-react";
 
 const compat = new FlatCompat();
 
@@ -15,8 +13,6 @@ const compat = new FlatCompat();
 const configurations: Linter.FlatConfig[] = [
   js.configs.recommended,
   prettierConfig,
-  reactPlugin.configs.recommended,
-  reactPlugin.configs["jsx-runtime"],
   ...compat.extends(
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-type-checked",
@@ -44,7 +40,7 @@ const configurations: Linter.FlatConfig[] = [
         ...globals.browser,
         ...globals.es2021,
       },
-      parser: typescriptParser,
+      parser: typescriptParser as unknown as any,
       parserOptions: {
         ecmaFeatures: { jsx: true },
         project: true,
@@ -52,7 +48,7 @@ const configurations: Linter.FlatConfig[] = [
       },
     },
     plugins: {
-      typescriptPlugin,
+      typescriptPlugin: typescriptPlugin as any,
     },
     rules: {
       "@typescript-eslint/adjacent-overload-signatures": "error",
@@ -176,7 +172,7 @@ const configurations: Linter.FlatConfig[] = [
         version: "detect",
       },
     },
-  },
+  } satisfies Linter.FlatConfig,
   {
     files: [
       "**/test.ts{,x}",
@@ -192,7 +188,7 @@ const configurations: Linter.FlatConfig[] = [
       "@typescript-eslint/unbound-method": "off",
       "require-yield": "off",
     },
-  },
+  } satisfies Linter.FlatConfig,
 ];
 
 /* eslint-enable @typescript-eslint/naming-convention */
