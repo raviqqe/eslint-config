@@ -131,7 +131,11 @@ const configurations: Linter.FlatConfig[] = [
       curly: "error",
       "dot-notation": "error",
       "eslint-comments/no-unused-disable": "error",
-      "import/extensions": ["error", "always", { ts: "never", tsx: "never" }],
+      "import/extensions": [
+        "error",
+        "always",
+        { jsx: "never", ts: "never", tsx: "never" },
+      ],
       "import/no-cycle": "error",
       "import/no-default-export": "error",
       "import/no-named-as-default": "error",
