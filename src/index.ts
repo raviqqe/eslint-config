@@ -21,7 +21,7 @@ const configurations: Linter.FlatConfig[] = [
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/strict",
-    // TODO Enable those rules.
+    // TODO Enable these rules.
     // "plugin:import/errors",
     // "plugin:import/warnings",
     // "plugin:import/typescript",
@@ -138,7 +138,8 @@ const configurations: Linter.FlatConfig[] = [
       ],
       "import/no-cycle": "error",
       "import/no-default-export": "error",
-      "import/no-named-as-default": "error",
+      // TODO Enable this rule.
+      // "import/no-named-as-default": "error",
       "import/no-unused-modules": "error",
       "import/order": ["error", { alphabetize: { order: "asc" } }],
       "lines-between-class-members": [
