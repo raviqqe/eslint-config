@@ -102,6 +102,7 @@ const configurations: Linter.FlatConfig[] = [
           selector: "typeLike",
         },
       ],
+      "@typescript-eslint/no-base-to-string": "error",
       "@typescript-eslint/no-empty-interface": [
         "error",
         { allowSingleExtends: true },
@@ -123,6 +124,8 @@ const configurations: Linter.FlatConfig[] = [
         "error",
         { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
       ],
+      "@typescript-eslint/no-useless-empty-export": "error",
+      "@typescript-eslint/no-useless-template-literal": "error",
       "@typescript-eslint/prefer-optional-chain": "error",
       "@typescript-eslint/prefer-readonly": "error",
       "@typescript-eslint/prefer-return-this-type": "error",
