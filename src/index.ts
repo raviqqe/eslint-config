@@ -125,7 +125,8 @@ const configurations: Linter.FlatConfig[] = [
         { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
       ],
       "@typescript-eslint/no-useless-empty-export": "error",
-      "@typescript-eslint/no-useless-template-literal": "error",
+      // TODO Enable this when it is implemented.
+      // "@typescript-eslint/no-useless-template-literal": "error",
       "@typescript-eslint/prefer-optional-chain": "error",
       "@typescript-eslint/prefer-readonly": "error",
       "@typescript-eslint/prefer-return-this-type": "error",
