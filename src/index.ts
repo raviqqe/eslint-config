@@ -126,7 +126,7 @@ const configurations: Linter.FlatConfig[] = [
       ],
       "@typescript-eslint/no-useless-constructor": "error",
       "@typescript-eslint/no-useless-empty-export": "error",
-      "@typescript-eslint/no-useless-template-literal": "error",
+      "@typescript-eslint/no-useless-template-literals": "error",
       "@typescript-eslint/prefer-optional-chain": "error",
       "@typescript-eslint/prefer-readonly": "error",
       "@typescript-eslint/prefer-return-this-type": "error",
