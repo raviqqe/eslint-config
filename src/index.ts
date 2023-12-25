@@ -124,9 +124,9 @@ const configurations: Linter.FlatConfig[] = [
         "error",
         { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
       ],
+      "@typescript-eslint/no-useless-constructor": "error",
       "@typescript-eslint/no-useless-empty-export": "error",
-      // TODO Enable this when it is implemented.
-      // "@typescript-eslint/no-useless-template-literal": "error",
+      "@typescript-eslint/no-useless-template-literal": "error",
       "@typescript-eslint/prefer-optional-chain": "error",
       "@typescript-eslint/prefer-readonly": "error",
       "@typescript-eslint/prefer-return-this-type": "error",
@@ -158,6 +158,7 @@ const configurations: Linter.FlatConfig[] = [
       "no-return-await": "error",
       "no-useless-return": "error",
       "object-shorthand": "error",
+      "prefer-arrow-callback": "error",
       quotes: [
         "error",
         "double",
