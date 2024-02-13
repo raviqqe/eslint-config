@@ -8,6 +8,7 @@ const compat = new FlatCompat();
 
 /* eslint-disable @typescript-eslint/naming-convention */
 
+// TODO Check types.
 const configurations = [
   js.configs.recommended,
   prettierConfig,
