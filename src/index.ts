@@ -1,6 +1,6 @@
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
-import { Linter } from "eslint";
+import type { Linter } from "eslint";
 import prettierConfig from "eslint-config-prettier";
 import globals from "globals";
 import typescript from "typescript-eslint";
@@ -23,10 +23,9 @@ const configurations: Linter.FlatConfig[] = [
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/strict",
-    // TODO Enable these rules.
-    // "plugin:import/errors",
-    // "plugin:import/warnings",
-    // "plugin:import/typescript",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
     "plugin:eslint-comments/recommended",
   ),
   ...compat.plugins(
