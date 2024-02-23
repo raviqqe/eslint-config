@@ -24,6 +24,7 @@ const configurations: Linter.FlatConfig[] = [
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/strict",
     // TODO Enable those plugins.
+    // https://github.com/import-js/eslint-plugin-import/issues/2556
     // "plugin:import/errors",
     // "plugin:import/warnings",
     // "plugin:import/typescript",
