@@ -23,9 +23,10 @@ const configurations: Linter.FlatConfig[] = [
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/strict",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
+    // TODO Enable those plugins.
+    // "plugin:import/errors",
+    // "plugin:import/warnings",
+    // "plugin:import/typescript",
     "plugin:eslint-comments/recommended",
   ),
   ...compat.plugins(
