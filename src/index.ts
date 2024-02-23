@@ -1,5 +1,6 @@
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
+import type { Linter } from "eslint";
 import prettierConfig from "eslint-config-prettier";
 import globals from "globals";
 import typescript from "typescript-eslint";
@@ -8,25 +9,23 @@ const compat = new FlatCompat();
 
 /* eslint-disable @typescript-eslint/naming-convention */
 
-// TODO Check types.
-const configurations = [
+const configurations: Linter.FlatConfig[] = [
   js.configs.recommended,
   prettierConfig,
-  ...typescript.config(
+  ...(typescript.config(
     ...typescript.configs.recommended,
     ...typescript.configs.recommendedTypeChecked,
     ...typescript.configs.stylistic,
     ...typescript.configs.stylisticTypeChecked,
-  ),
+  ) as unknown as Linter.FlatConfig[]),
   ...compat.extends(
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/strict",
-    // TODO Enable these rules.
-    // "plugin:import/errors",
-    // "plugin:import/warnings",
-    // "plugin:import/typescript",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
     "plugin:eslint-comments/recommended",
   ),
   ...compat.plugins(
@@ -42,7 +41,7 @@ const configurations = [
         ...globals.browser,
         ...globals.es2021,
       },
-      parser: typescript.parser,
+      parser: typescript.parser as Linter.ParserModule,
       parserOptions: {
         ecmaFeatures: { jsx: true },
         project: true,
