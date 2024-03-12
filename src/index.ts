@@ -2,7 +2,7 @@ import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import prettierConfig from "eslint-config-prettier";
 import globals from "globals";
-import typescript, { ConfigWithExtends } from "typescript-eslint";
+import typescript, { type ConfigWithExtends } from "typescript-eslint";
 
 const compat = new FlatCompat();
 
