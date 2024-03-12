@@ -1,23 +1,22 @@
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
-import type { Linter } from "eslint";
 import prettierConfig from "eslint-config-prettier";
 import globals from "globals";
-import typescript from "typescript-eslint";
+import typescript, { type ConfigWithExtends } from "typescript-eslint";
 
 const compat = new FlatCompat();
 
 /* eslint-disable @typescript-eslint/naming-convention */
 
-const configurations: Linter.FlatConfig[] = [
+const configurations: ConfigWithExtends[] = [
   js.configs.recommended,
   prettierConfig,
-  ...(typescript.config(
+  ...typescript.config(
     ...typescript.configs.recommended,
     ...typescript.configs.recommendedTypeChecked,
     ...typescript.configs.stylistic,
     ...typescript.configs.stylisticTypeChecked,
-  ) as unknown as Linter.FlatConfig[]),
+  ),
   ...compat.extends(
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
@@ -43,7 +42,7 @@ const configurations: Linter.FlatConfig[] = [
         ...globals.browser,
         ...globals.es2021,
       },
-      parser: typescript.parser as Linter.ParserModule,
+      parser: typescript.parser,
       parserOptions: {
         ecmaFeatures: { jsx: true },
         project: true,
