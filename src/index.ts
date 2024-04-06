@@ -32,13 +32,7 @@ const configurations: ConfigWithExtends[] = [
     // "plugin:import/typescript",
     "plugin:eslint-comments/recommended",
   ),
-  ...compat.plugins(
-    "import",
-    "react",
-    "react-hooks",
-    "jsx-a11y",
-    "eslint-comments",
-  ),
+  ...compat.plugins("import", "react-hooks", "jsx-a11y", "eslint-comments"),
   {
     languageOptions: {
       globals: {
