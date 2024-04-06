@@ -3,6 +3,8 @@ import js from "@eslint/js";
 import prettierConfig from "eslint-config-prettier";
 import globals from "globals";
 import typescript, { type ConfigWithExtends } from "typescript-eslint";
+// @ts-expect-error Missing types
+import reactRecommended from "eslint-plugin-react/configs/recommended";
 
 const compat = new FlatCompat();
 
@@ -10,6 +12,7 @@ const compat = new FlatCompat();
 
 const configurations: ConfigWithExtends[] = [
   js.configs.recommended,
+  reactRecommended,
   prettierConfig,
   ...typescript.config(
     ...typescript.configs.recommended,
