@@ -1,12 +1,12 @@
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import prettierConfig from "eslint-config-prettier";
-import globals from "globals";
-import typescript, { type ConfigWithExtends } from "typescript-eslint";
 // @ts-expect-error missing types
 import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
 // @ts-expect-error missing types
 import reactRecommended from "eslint-plugin-react/configs/recommended.js";
+import globals from "globals";
+import typescript, { type ConfigWithExtends } from "typescript-eslint";
 
 const compat = new FlatCompat();
 
@@ -14,8 +14,8 @@ const compat = new FlatCompat();
 
 const configurations: ConfigWithExtends[] = [
   js.configs.recommended,
-  reactJsxRuntime,
-  reactRecommended,
+  reactJsxRuntime as ConfigWithExtends,
+  reactRecommended as ConfigWithExtends,
   prettierConfig,
   ...typescript.config(
     ...typescript.configs.recommended,
