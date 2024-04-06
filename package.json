@@ -19,12 +19,8 @@
     "@eslint/js": "^9.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-import-resolver-typescript": "^3.5.3",
-    "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.31.8",
-    "eslint-plugin-react-hooks": "^4.6.0",
     "globals": "^15.0.0",
     "prettier": "^3.0.0",
     "typescript-eslint": "^7.0.1"
@@ -37,5 +33,11 @@
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/node": "^20.0.0",
     "typescript": "^5.0.2"
+  },
+  "peerDependencies": {
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react-hooks": "^4.6.0"
   }
 }
