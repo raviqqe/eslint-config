@@ -14,8 +14,8 @@ const compat = new FlatCompat();
 
 const configurations: ConfigWithExtends[] = [
   js.configs.recommended,
-  reactJsxRuntime as ConfigWithExtends,
   reactRecommended as ConfigWithExtends,
+  reactJsxRuntime as ConfigWithExtends,
   prettierConfig,
   ...typescript.config(
     ...typescript.configs.recommended,
