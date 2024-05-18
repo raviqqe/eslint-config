@@ -143,8 +143,7 @@ const configurations: ConfigWithExtends[] = [
       // TODO Enable this.
       "import-x/namespaces": "off",
       "import-x/no-cycle": "error",
-      // TODO Enable this.
-      "import-x/no-default-export": "off",
+      "import-x/no-default-export": "error",
       // TODO Enable this.
       "import-x/no-named-as-default": "off",
       // TODO Enable this.
