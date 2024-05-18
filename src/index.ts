@@ -132,11 +132,16 @@ const configurations: ConfigWithExtends[] = [
       curly: "error",
       "dot-notation": "error",
       "eslint-comments/no-unused-disable": "error",
+      // TODO Enable this.
+      "import-x/default": "off",
+      // TODO Enable this.
       "import-x/extensions": [
-        "error",
+        "off",
         "always",
         { jsx: "never", ts: "never", tsx: "never" },
       ],
+      // TODO Enable this.
+      "import-x/namespaces": "off",
       "import-x/no-cycle": "error",
       // TODO Enable this.
       "import-x/no-default-export": "off",
