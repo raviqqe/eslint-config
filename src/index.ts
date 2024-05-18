@@ -26,11 +26,9 @@ const configurations: ConfigWithExtends[] = [
   ...compat.extends(
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/strict",
-    // TODO Enable those plugins.
-    // https://github.com/import-js/eslint-plugin-import/issues/2556
-    // "plugin:import/errors",
-    // "plugin:import/warnings",
-    // "plugin:import/typescript",
+    "plugin:import-x/errors",
+    "plugin:import-x/warnings",
+    "plugin:import-x/typescript",
     "plugin:eslint-comments/recommended",
   ),
   ...compat.plugins("import", "react-hooks", "jsx-a11y", "eslint-comments"),
@@ -134,17 +132,16 @@ const configurations: ConfigWithExtends[] = [
       curly: "error",
       "dot-notation": "error",
       "eslint-comments/no-unused-disable": "error",
-      "import/extensions": [
+      "import-x/extensions": [
         "error",
         "always",
         { jsx: "never", ts: "never", tsx: "never" },
       ],
-      "import/no-cycle": "error",
-      "import/no-default-export": "error",
-      // TODO Enable this rule.
-      // "import/no-named-as-default": "error",
-      "import/no-unused-modules": "error",
-      "import/order": ["error", { alphabetize: { order: "asc" } }],
+      "import-x/no-cycle": "error",
+      "import-x/no-default-export": "error",
+      "import-x/no-named-as-default": "error",
+      "import-x/no-unused-modules": "error",
+      "import-x/order": ["error", { alphabetize: { order: "asc" } }],
       "lines-between-class-members": [
         "error",
         "always",
@@ -172,7 +169,7 @@ const configurations: ConfigWithExtends[] = [
       "sort-keys": "error",
     },
     settings: {
-      "import/resolver": {
+      "import-x/resolver": {
         typescript: true,
       },
       react: {
@@ -200,5 +197,5 @@ const configurations: ConfigWithExtends[] = [
 
 /* eslint-enable @typescript-eslint/naming-convention */
 
-// eslint-disable-next-line import/no-default-export
+// eslint-disable-next-line import-x/no-default-export
 export default configurations;
