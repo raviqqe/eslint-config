@@ -138,8 +138,12 @@ const configurations: ConfigWithExtends[] = [
         { jsx: "never", ts: "never", tsx: "never" },
       ],
       "import-x/no-cycle": "error",
-      "import-x/no-default-export": "error",
-      "import-x/no-named-as-default": "error",
+      // TODO Enable this.
+      "import-x/no-default-export": "off",
+      // TODO Enable this.
+      "import-x/no-named-as-default": "off",
+      // TODO Enable this.
+      "import-x/no-named-as-default-member": "off",
       "import-x/no-unused-modules": "error",
       "import-x/order": ["error", { alphabetize: { order: "asc" } }],
       "lines-between-class-members": [
