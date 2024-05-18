@@ -141,7 +141,7 @@ const configurations: ConfigWithExtends[] = [
         { jsx: "never", ts: "never", tsx: "never" },
       ],
       // TODO Enable this.
-      "import-x/namespaces": "off",
+      "import-x/namespace": "off",
       "import-x/no-cycle": "error",
       "import-x/no-default-export": "error",
       // TODO Enable this.
