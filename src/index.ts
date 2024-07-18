@@ -116,6 +116,7 @@ const configurations: ConfigWithExtends[] = [
         "error",
         { allowConstantLoopConditions: true },
       ],
+      "@typescript-eslint/no-unnecessary-template-expression": "error",
       "@typescript-eslint/no-unnecessary-type-arguments": "error",
       "@typescript-eslint/no-unused-vars": [
         "error",
@@ -123,7 +124,6 @@ const configurations: ConfigWithExtends[] = [
       ],
       "@typescript-eslint/no-useless-constructor": "error",
       "@typescript-eslint/no-useless-empty-export": "error",
-      "@typescript-eslint/no-useless-template-literals": "error",
       "@typescript-eslint/prefer-optional-chain": "error",
       "@typescript-eslint/prefer-readonly": "error",
       "@typescript-eslint/prefer-return-this-type": "error",
