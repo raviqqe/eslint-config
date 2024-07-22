@@ -122,8 +122,8 @@ const configurations: ConfigWithExtends[] = [
         "error",
         {
           argsIgnorePattern: "^_",
-          varsIgnorePattern: "^_",
           caughtErrorsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
         },
       ],
       "@typescript-eslint/no-useless-constructor": "error",
