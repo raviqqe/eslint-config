@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@raviqqe/tsconfig": "^1.0.8",
-    "@types/eslint": "^8.4.6",
+    "@types/eslint": "^9.6.1",
     "@types/eslint__eslintrc": "^2.1.1",
     "@types/eslint__js": "^8.42.3",
     "@types/eslint-config-prettier": "^6.11.3",
