@@ -7,6 +7,7 @@ import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
 import reactRecommended from "eslint-plugin-react/configs/recommended.js";
 import globals from "globals";
 import typescript, { type ConfigWithExtends } from "typescript-eslint";
+import importX from "eslint-plugin-import-x";
 
 const compat = new FlatCompat();
 
@@ -17,6 +18,9 @@ const configurations: ConfigWithExtends[] = [
   reactRecommended as ConfigWithExtends,
   reactJsxRuntime as ConfigWithExtends,
   prettierConfig,
+  importX.flatConfigs.recommended,
+  importX.flatConfigs.react,
+  importX.flatConfigs.typescript,
   ...typescript.config(
     ...typescript.configs.recommended,
     ...typescript.configs.recommendedTypeChecked,
@@ -31,7 +35,7 @@ const configurations: ConfigWithExtends[] = [
     "plugin:import-x/typescript",
     "plugin:eslint-comments/recommended",
   ),
-  ...compat.plugins("import", "react-hooks", "jsx-a11y", "eslint-comments"),
+  ...compat.plugins("react-hooks", "jsx-a11y", "eslint-comments"),
   {
     languageOptions: {
       globals: {
