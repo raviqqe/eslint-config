@@ -1,8 +1,8 @@
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import prettierConfig from "eslint-config-prettier";
-// @ts-expect-error missing types
 import importX from "eslint-plugin-import-x";
+// @ts-expect-error missing types
 import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
 // @ts-expect-error missing types
 import reactRecommended from "eslint-plugin-react/configs/recommended.js";
