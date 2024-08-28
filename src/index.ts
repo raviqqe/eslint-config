@@ -1,6 +1,7 @@
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import prettierConfig from "eslint-config-prettier";
+import importX from "eslint-plugin-import-x";
 // @ts-expect-error missing types
 import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
 // @ts-expect-error missing types
@@ -17,6 +18,9 @@ const configurations: ConfigWithExtends[] = [
   reactRecommended as ConfigWithExtends,
   reactJsxRuntime as ConfigWithExtends,
   prettierConfig,
+  importX.flatConfigs.errors,
+  importX.flatConfigs.warnings,
+  importX.flatConfigs.typescript,
   ...typescript.config(
     ...typescript.configs.recommended,
     ...typescript.configs.recommendedTypeChecked,
@@ -26,12 +30,9 @@ const configurations: ConfigWithExtends[] = [
   ...compat.extends(
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/strict",
-    "plugin:import-x/errors",
-    "plugin:import-x/warnings",
-    "plugin:import-x/typescript",
     "plugin:eslint-comments/recommended",
   ),
-  ...compat.plugins("import", "react-hooks", "jsx-a11y", "eslint-comments"),
+  ...compat.plugins("react-hooks", "jsx-a11y", "eslint-comments"),
   {
     languageOptions: {
       globals: {
@@ -152,6 +153,7 @@ const configurations: ConfigWithExtends[] = [
       "import-x/no-named-as-default": "off",
       // TODO Enable this.
       "import-x/no-named-as-default-member": "off",
+      "import-x/no-rename-default": "off",
       "import-x/no-unused-modules": "error",
       "import-x/order": ["error", { alphabetize: { order: "asc" } }],
       "lines-between-class-members": [
