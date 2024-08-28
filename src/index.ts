@@ -18,8 +18,8 @@ const configurations: ConfigWithExtends[] = [
   reactRecommended as ConfigWithExtends,
   reactJsxRuntime as ConfigWithExtends,
   prettierConfig,
-  importX.flatConfigs.recommended,
-  importX.flatConfigs.react,
+  importX.flatConfigs.errors,
+  importX.flatConfigs.warnings,
   importX.flatConfigs.typescript,
   ...typescript.config(
     ...typescript.configs.recommended,
@@ -30,9 +30,6 @@ const configurations: ConfigWithExtends[] = [
   ...compat.extends(
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/strict",
-    "plugin:import-x/errors",
-    "plugin:import-x/warnings",
-    "plugin:import-x/typescript",
     "plugin:eslint-comments/recommended",
   ),
   ...compat.plugins("react-hooks", "jsx-a11y", "eslint-comments"),
