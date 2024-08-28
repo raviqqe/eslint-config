@@ -153,6 +153,7 @@ const configurations: ConfigWithExtends[] = [
       "import-x/no-named-as-default": "off",
       // TODO Enable this.
       "import-x/no-named-as-default-member": "off",
+      "import-x/no-rename-default": "off",
       "import-x/no-unused-modules": "error",
       "import-x/order": ["error", { alphabetize: { order: "asc" } }],
       "lines-between-class-members": [
