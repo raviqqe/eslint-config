@@ -8,6 +8,7 @@ import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
 import reactRecommended from "eslint-plugin-react/configs/recommended.js";
 import globals from "globals";
 import typescript, { type ConfigWithExtends } from "typescript-eslint";
+import jsxA11y from "eslint-plugin-jsx-a11y";
 
 const compat = new FlatCompat();
 
