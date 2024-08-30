@@ -2,7 +2,6 @@ import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import prettierConfig from "eslint-config-prettier";
 import importX from "eslint-plugin-import-x";
-import jsxA11y from "eslint-plugin-jsx-a11y";
 // @ts-expect-error missing types
 import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
 // @ts-expect-error missing types
@@ -18,7 +17,6 @@ const configurations: ConfigWithExtends[] = [
   js.configs.recommended,
   reactRecommended as ConfigWithExtends,
   reactJsxRuntime as ConfigWithExtends,
-  jsxA11y.flatConfigs.strict,
   prettierConfig,
   importX.flatConfigs.errors,
   importX.flatConfigs.warnings,
