@@ -18,6 +18,7 @@ const configurations: ConfigWithExtends[] = [
   js.configs.recommended,
   reactRecommended as ConfigWithExtends,
   reactJsxRuntime as ConfigWithExtends,
+  jsxA11y.flatConfigs.strict,
   prettierConfig,
   importX.flatConfigs.errors,
   importX.flatConfigs.warnings,
@@ -30,10 +31,9 @@ const configurations: ConfigWithExtends[] = [
   ),
   ...compat.extends(
     "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/strict",
     "plugin:eslint-comments/recommended",
   ),
-  ...compat.plugins("react-hooks", "jsx-a11y", "eslint-comments"),
+  ...compat.plugins("react-hooks", "eslint-comments"),
   {
     languageOptions: {
       globals: {
