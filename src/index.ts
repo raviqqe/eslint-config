@@ -164,6 +164,7 @@ const configurations: ConfigWithExtends[] = [
       "no-return-await": "error",
       "no-useless-return": "error",
       "object-shorthand": "error",
+      "perfectionist/sort-classes": "off",
       "perfectionist/sort-imports": "off",
       "perfectionist/sort-union-types": [
         "error",
