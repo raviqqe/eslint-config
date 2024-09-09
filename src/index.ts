@@ -2,6 +2,7 @@ import js from "@eslint/js";
 // @ts-expect-error missing types
 import comments from "@eslint-community/eslint-plugin-eslint-comments/configs";
 import prettierConfig from "eslint-config-prettier";
+import perfectionist from "eslint-plugin-perfectionist";
 import importX from "eslint-plugin-import-x";
 // @ts-expect-error missing types
 import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
@@ -21,6 +22,7 @@ const configurations: ConfigWithExtends[] = [
   importX.flatConfigs.errors,
   importX.flatConfigs.warnings,
   importX.flatConfigs.typescript,
+  perfectionist.configs["recommended-natural"],
   ...typescript.config(
     ...typescript.configs.recommended,
     ...typescript.configs.recommendedTypeChecked,
