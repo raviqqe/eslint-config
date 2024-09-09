@@ -1,6 +1,6 @@
+import js from "@eslint/js";
 // @ts-expect-error missing types
 import comments from "@eslint-community/eslint-plugin-eslint-comments/configs";
-import js from "@eslint/js";
 import prettierConfig from "eslint-config-prettier";
 import importX from "eslint-plugin-import-x";
 // @ts-expect-error missing types
@@ -14,7 +14,7 @@ import typescript, { type ConfigWithExtends } from "typescript-eslint";
 
 const configurations: ConfigWithExtends[] = [
   js.configs.recommended,
-  comments.recommended,
+  comments.recommended as ConfigWithExtends,
   reactRecommended as ConfigWithExtends,
   reactJsxRuntime as ConfigWithExtends,
   prettierConfig,
@@ -41,6 +41,7 @@ const configurations: ConfigWithExtends[] = [
       },
     },
     rules: {
+      "@eslint-community/eslint-comments/no-unused-disable": "error",
       "@typescript-eslint/adjacent-overload-signatures": "error",
       "@typescript-eslint/array-type": "error",
       "@typescript-eslint/consistent-indexed-object-style": "error",
@@ -130,7 +131,6 @@ const configurations: ConfigWithExtends[] = [
       "arrow-body-style": "error",
       curly: "error",
       "dot-notation": "error",
-      "@eslint-community/eslint-comments/no-unused-disable": "error",
       // TODO Enable this.
       "import-x/default": "off",
       // TODO Enable this.
