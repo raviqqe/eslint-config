@@ -170,7 +170,6 @@ const configurations: ConfigWithExtends[] = [
         "double",
         { allowTemplateLiterals: false, avoidEscape: true },
       ],
-      "react-hooks/exhaustive-deps": "error",
       "react/jsx-boolean-value": "error",
       "react/jsx-curly-brace-presence": "error",
       "react/jsx-no-useless-fragment": "error",
