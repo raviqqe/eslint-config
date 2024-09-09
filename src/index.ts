@@ -1,5 +1,5 @@
 // @ts-expect-error missing types
-import comments from "@eslint-community/eslint-plugin-eslint-comments";
+import comments from "@eslint-community/eslint-plugin-eslint-comments/configs";
 import js from "@eslint/js";
 import prettierConfig from "eslint-config-prettier";
 import importX from "eslint-plugin-import-x";
@@ -130,7 +130,7 @@ const configurations: ConfigWithExtends[] = [
       "arrow-body-style": "error",
       curly: "error",
       "dot-notation": "error",
-      "eslint-comments/no-unused-disable": "error",
+      "@eslint-community/eslint-comments/no-unused-disable": "error",
       // TODO Enable this.
       "import-x/default": "off",
       // TODO Enable this.
