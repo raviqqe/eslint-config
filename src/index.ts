@@ -164,6 +164,14 @@ const configurations: ConfigWithExtends[] = [
       "no-return-await": "error",
       "no-useless-return": "error",
       "object-shorthand": "error",
+      "perfectionist/sort-union-types": [
+        "error",
+        {
+          groups: ["unknown", "nullish"],
+          ignoreCase: true,
+          type: "natural",
+        },
+      ],
       "prefer-arrow-callback": "error",
       quotes: [
         "error",
