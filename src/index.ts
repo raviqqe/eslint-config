@@ -1,5 +1,6 @@
-import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
+// @ts-expect-error missing types
+import comments from "@eslint-community/eslint-plugin-eslint-comments/configs";
 import prettierConfig from "eslint-config-prettier";
 import importX from "eslint-plugin-import-x";
 // @ts-expect-error missing types
@@ -9,12 +10,11 @@ import reactRecommended from "eslint-plugin-react/configs/recommended.js";
 import globals from "globals";
 import typescript, { type ConfigWithExtends } from "typescript-eslint";
 
-const compat = new FlatCompat();
-
 /* eslint-disable @typescript-eslint/naming-convention */
 
 const configurations: ConfigWithExtends[] = [
   js.configs.recommended,
+  (comments as { recommended: ConfigWithExtends }).recommended,
   reactRecommended as ConfigWithExtends,
   reactJsxRuntime as ConfigWithExtends,
   prettierConfig,
@@ -27,8 +27,6 @@ const configurations: ConfigWithExtends[] = [
     ...typescript.configs.stylistic,
     ...typescript.configs.stylisticTypeChecked,
   ),
-  ...compat.extends("plugin:eslint-comments/recommended"),
-  ...compat.plugins("eslint-comments"),
   {
     languageOptions: {
       globals: {
@@ -43,6 +41,7 @@ const configurations: ConfigWithExtends[] = [
       },
     },
     rules: {
+      "@eslint-community/eslint-comments/no-unused-disable": "error",
       "@typescript-eslint/adjacent-overload-signatures": "error",
       "@typescript-eslint/array-type": "error",
       "@typescript-eslint/consistent-indexed-object-style": "error",
@@ -132,7 +131,6 @@ const configurations: ConfigWithExtends[] = [
       "arrow-body-style": "error",
       curly: "error",
       "dot-notation": "error",
-      "eslint-comments/no-unused-disable": "error",
       // TODO Enable this.
       "import-x/default": "off",
       // TODO Enable this.
