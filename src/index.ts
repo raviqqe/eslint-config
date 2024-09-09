@@ -185,7 +185,7 @@ const configurations: ConfigWithExtends[] = [
       "react/jsx-no-useless-fragment": "error",
       "react/jsx-sort-props": "error",
       "react/no-unescaped-entities": "off",
-      "sort-keys": "error",
+      "sort-keys": ["error", "asc", { caseSensitive: false, natural: true }],
     },
     settings: {
       "import-x/resolver": {
