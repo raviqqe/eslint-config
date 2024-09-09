@@ -27,11 +27,8 @@ const configurations: ConfigWithExtends[] = [
     ...typescript.configs.stylistic,
     ...typescript.configs.stylisticTypeChecked,
   ),
-  ...compat.extends(
-    "plugin:react-hooks/recommended",
-    "plugin:eslint-comments/recommended",
-  ),
-  ...compat.plugins("react-hooks", "eslint-comments"),
+  ...compat.extends("plugin:eslint-comments/recommended"),
+  ...compat.plugins("eslint-comments"),
   {
     languageOptions: {
       globals: {
@@ -173,7 +170,6 @@ const configurations: ConfigWithExtends[] = [
         "double",
         { allowTemplateLiterals: false, avoidEscape: true },
       ],
-      "react-hooks/exhaustive-deps": "error",
       "react/jsx-boolean-value": "error",
       "react/jsx-curly-brace-presence": "error",
       "react/jsx-no-useless-fragment": "error",
