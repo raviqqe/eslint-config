@@ -27,11 +27,8 @@ const configurations: ConfigWithExtends[] = [
     ...typescript.configs.stylistic,
     ...typescript.configs.stylisticTypeChecked,
   ),
-  ...compat.extends(
-    "plugin:react-hooks/recommended",
-    "plugin:eslint-comments/recommended",
-  ),
-  ...compat.plugins("react-hooks", "eslint-comments"),
+  ...compat.extends("plugin:eslint-comments/recommended"),
+  ...compat.plugins("eslint-comments"),
   {
     languageOptions: {
       globals: {
