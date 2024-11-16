@@ -3,8 +3,8 @@ import js from "@eslint/js";
 import comments from "@eslint-community/eslint-plugin-eslint-comments/configs";
 import importX from "eslint-plugin-import-x";
 import perfectionist from "eslint-plugin-perfectionist";
-// @ts-expect-error missing types
 import prettier from "eslint-plugin-prettier/recommended";
+// @ts-expect-error missing types
 import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
 // @ts-expect-error missing types
 import reactRecommended from "eslint-plugin-react/configs/recommended.js";
