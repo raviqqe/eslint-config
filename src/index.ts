@@ -9,7 +9,7 @@ import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
 import reactRecommended from "eslint-plugin-react/configs/recommended.js";
 import globals from "globals";
 import typescript, { type ConfigWithExtends } from "typescript-eslint";
-import prettierRecommended from "eslint-plugin-prettier/recommended";
+import prettier from "eslint-plugin-prettier/recommended";
 
 /* eslint-disable @typescript-eslint/naming-convention */
 
@@ -18,7 +18,7 @@ const configurations: ConfigWithExtends[] = [
   (comments as { recommended: ConfigWithExtends }).recommended,
   reactRecommended as ConfigWithExtends,
   reactJsxRuntime as ConfigWithExtends,
-  prettierRecommended,
+  prettier,
   importX.flatConfigs.errors,
   importX.flatConfigs.warnings,
   importX.flatConfigs.typescript,
