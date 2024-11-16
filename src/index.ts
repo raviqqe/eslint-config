@@ -1,7 +1,6 @@
 import js from "@eslint/js";
 // @ts-expect-error missing types
 import comments from "@eslint-community/eslint-plugin-eslint-comments/configs";
-import prettierConfig from "eslint-config-prettier";
 import importX from "eslint-plugin-import-x";
 import perfectionist from "eslint-plugin-perfectionist";
 // @ts-expect-error missing types
@@ -10,6 +9,7 @@ import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
 import reactRecommended from "eslint-plugin-react/configs/recommended.js";
 import globals from "globals";
 import typescript, { type ConfigWithExtends } from "typescript-eslint";
+import prettierRecommended from "eslint-plugin-prettier/recommended";
 
 /* eslint-disable @typescript-eslint/naming-convention */
 
@@ -18,7 +18,7 @@ const configurations: ConfigWithExtends[] = [
   (comments as { recommended: ConfigWithExtends }).recommended,
   reactRecommended as ConfigWithExtends,
   reactJsxRuntime as ConfigWithExtends,
-  prettierConfig,
+  prettierRecommended,
   importX.flatConfigs.errors,
   importX.flatConfigs.warnings,
   importX.flatConfigs.typescript,
