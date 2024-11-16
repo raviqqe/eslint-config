@@ -4,12 +4,12 @@ import comments from "@eslint-community/eslint-plugin-eslint-comments/configs";
 import importX from "eslint-plugin-import-x";
 import perfectionist from "eslint-plugin-perfectionist";
 // @ts-expect-error missing types
+import prettier from "eslint-plugin-prettier/recommended";
 import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
 // @ts-expect-error missing types
 import reactRecommended from "eslint-plugin-react/configs/recommended.js";
 import globals from "globals";
 import typescript, { type ConfigWithExtends } from "typescript-eslint";
-import prettier from "eslint-plugin-prettier/recommended";
 
 /* eslint-disable @typescript-eslint/naming-convention */
 
