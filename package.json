@@ -12,7 +12,7 @@
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
-    "test": "npm run prepare && eslint src"
+    "test": "npm run prepare && eslint"
   },
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.0",
