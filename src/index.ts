@@ -211,6 +211,9 @@ const configurations: ConfigWithExtends[] = [
       "require-yield": "off",
     },
   },
+  {
+    ignores: ["dist"],
+  },
 ];
 
 /* eslint-enable @typescript-eslint/naming-convention */
