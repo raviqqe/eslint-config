@@ -212,7 +212,7 @@ const configurations: ConfigWithExtends[] = [
     },
   },
   {
-    ignores: ["build", "dist"],
+    ignores: ["build", "coverange", "dist"],
   },
 ];
 
