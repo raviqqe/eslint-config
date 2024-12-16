@@ -15,9 +15,9 @@ import typescript, { type ConfigWithExtends } from "typescript-eslint";
 
 const configurations: ConfigWithExtends[] = [
   js.configs.recommended,
-  (comments as { recommended: ConfigWithExtends }).recommended,
-  reactRecommended as ConfigWithExtends,
-  reactJsxRuntime as ConfigWithExtends,
+  comments.recommended,
+  reactRecommended,
+  reactJsxRuntime,
   prettier,
   importX.flatConfigs.errors,
   importX.flatConfigs.warnings,
