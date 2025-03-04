@@ -134,21 +134,16 @@ const configurations: ConfigWithExtends[] = [
       "arrow-body-style": "error",
       curly: "error",
       "dot-notation": "error",
-      // TODO Enable this.
       "import-x/default": "off",
-      // TODO Enable this.
       "import-x/extensions": [
         "off",
         "always",
         { jsx: "never", ts: "never", tsx: "never" },
       ],
-      // TODO Enable this.
       "import-x/namespace": "off",
       "import-x/no-cycle": "error",
       "import-x/no-default-export": "error",
-      // TODO Enable this.
       "import-x/no-named-as-default": "off",
-      // TODO Enable this.
       "import-x/no-named-as-default-member": "off",
       "import-x/no-rename-default": "off",
       "import-x/no-unused-modules": "error",
