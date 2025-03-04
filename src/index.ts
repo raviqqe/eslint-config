@@ -1,6 +1,7 @@
 import js from "@eslint/js";
 // @ts-expect-error missing types
 import comments from "@eslint-community/eslint-plugin-eslint-comments/configs";
+import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import importX from "eslint-plugin-import-x";
 import perfectionist from "eslint-plugin-perfectionist";
 import prettier from "eslint-plugin-prettier/recommended";
@@ -187,9 +188,7 @@ const configurations: ConfigWithExtends[] = [
       "sort-keys": ["error", "asc", { caseSensitive: false, natural: true }],
     },
     settings: {
-      "import-x/resolver": {
-        typescript: true,
-      },
+      "import-x/resolver-next": [createTypeScriptImportResolver()],
       react: {
         version: "detect",
       },
