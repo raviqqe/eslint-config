@@ -1,6 +1,7 @@
 import js from "@eslint/js";
 // @ts-expect-error missing types
 import comments from "@eslint-community/eslint-plugin-eslint-comments/configs";
+import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import importX from "eslint-plugin-import-x";
 import perfectionist from "eslint-plugin-perfectionist";
 import prettier from "eslint-plugin-prettier/recommended";
@@ -10,7 +11,6 @@ import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
 import reactRecommended from "eslint-plugin-react/configs/recommended.js";
 import globals from "globals";
 import typescript, { type ConfigWithExtends } from "typescript-eslint";
-import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 
 /* eslint-disable @typescript-eslint/naming-convention */
 
