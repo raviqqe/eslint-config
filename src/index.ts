@@ -34,7 +34,7 @@ const configurations: ConfigWithExtends[] = [
     languageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.es2021,
+        ...globals.es2025,
       },
       parser: typescript.parser,
       parserOptions: {
