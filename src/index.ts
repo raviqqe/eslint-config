@@ -10,6 +10,7 @@ import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
 import reactRecommended from "eslint-plugin-react/configs/recommended.js";
 import globals from "globals";
 import typescript, { type ConfigWithExtends } from "typescript-eslint";
+import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 
 /* eslint-disable @typescript-eslint/naming-convention */
 
@@ -187,9 +188,7 @@ const configurations: ConfigWithExtends[] = [
       "sort-keys": ["error", "asc", { caseSensitive: false, natural: true }],
     },
     settings: {
-      "import-x/resolver": {
-        typescript: true,
-      },
+      "import-x/resolver-next": [createTypeScriptImportResolver()],
       react: {
         version: "detect",
       },
