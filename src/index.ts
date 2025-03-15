@@ -206,6 +206,12 @@ const configurations: ConfigWithExtends[] = [
     },
   },
   {
+    files: ["**/*.config.{js,ts}"],
+    rules: {
+      "import-x/no-default-export": "off",
+    },
+  },
+  {
     ignores: ["build", "coverage", "dist"],
   },
 ];
