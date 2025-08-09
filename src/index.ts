@@ -1,10 +1,10 @@
 import js from "@eslint/js";
 // @ts-expect-error missing types
 import comments from "@eslint-community/eslint-plugin-eslint-comments/configs";
+import biome from "eslint-config-biome";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import importX from "eslint-plugin-import-x";
 import perfectionist from "eslint-plugin-perfectionist";
-import prettier from "eslint-plugin-prettier/recommended";
 // @ts-expect-error missing types
 import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
 // @ts-expect-error missing types
@@ -19,11 +19,11 @@ const configurations: ConfigWithExtends[] = [
   (comments as { recommended: ConfigWithExtends }).recommended,
   reactRecommended as ConfigWithExtends,
   reactJsxRuntime as ConfigWithExtends,
-  prettier,
   importX.flatConfigs.errors,
   importX.flatConfigs.warnings,
   importX.flatConfigs.typescript,
   perfectionist.configs["recommended-natural"],
+biome,
   ...typescript.config(
     ...typescript.configs.recommended,
     ...typescript.configs.recommendedTypeChecked,
