@@ -1,7 +1,6 @@
 import js from "@eslint/js";
 // @ts-expect-error missing types
 import comments from "@eslint-community/eslint-plugin-eslint-comments/configs";
-import biome from "eslint-config-biome";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import importX from "eslint-plugin-import-x";
 import perfectionist from "eslint-plugin-perfectionist";
@@ -23,8 +22,7 @@ const configurations: ConfigWithExtends[] = [
   importX.flatConfigs.warnings,
   importX.flatConfigs.typescript,
   perfectionist.configs["recommended-natural"],
-biome,
-  ...typescript.config(
+    ...typescript.config(
     ...typescript.configs.recommended,
     ...typescript.configs.recommendedTypeChecked,
     ...typescript.configs.stylistic,
