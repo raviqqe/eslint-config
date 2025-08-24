@@ -216,5 +216,5 @@ const configurations: ConfigWithExtends[] = [
 
 /* eslint-enable @typescript-eslint/naming-convention */
 
-// eslint-disable-next-line import-x/no-default-export
-export default configurations;
+// biome-ignore lint/style/noDefaultExport: External API
+export default configurations; // eslint-disable-line import-x/no-default-export
