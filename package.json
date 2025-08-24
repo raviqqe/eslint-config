@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build",
+    "lint": "biome ci",
     "test": "npm run prepare && eslint src"
   },
   "dependencies": {
