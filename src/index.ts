@@ -11,6 +11,8 @@ import reactRecommended from "eslint-plugin-react/configs/recommended.js";
 import globals from "globals";
 import typescript, { type ConfigWithExtends } from "typescript-eslint";
 
+/* eslint-disable @typescript-eslint/naming-convention */
+
 const configurations: ConfigWithExtends[] = [
   js.configs.recommended,
   (comments as { recommended: ConfigWithExtends }).recommended,
@@ -212,5 +214,7 @@ const configurations: ConfigWithExtends[] = [
   },
 ];
 
+/* eslint-enable @typescript-eslint/naming-convention */
+
 // biome-ignore lint/style/noDefaultExport: External API
-export default configurations;
+export default configurations; // eslint-disable-line import-x/no-default-export
