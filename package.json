@@ -2,13 +2,16 @@
   "name": "@raviqqe/eslint-config",
   "description": "ESLint configuration",
   "version": "5.0.0",
-  "type": "module",
   "main": "dist/index.js",
   "license": "MIT",
   "repository": "https://github.com/raviqqe/eslint-config",
   "publishConfig": {
     "provenance": true
   },
+  "engines": {
+    "node": ">=24.6.0"
+  },
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "lint": "biome ci",
