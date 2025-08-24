@@ -15,7 +15,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "biome ci",
-    "test": "npm run prepare && eslint src"
+    "test": "node --run build && eslint src"
   },
   "dependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
