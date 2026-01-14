@@ -1,17 +1,14 @@
 {
   "name": "@raviqqe/eslint-config",
-  "description": "ESLint configuration",
   "version": "5.0.2",
-  "main": "dist/index.js",
+  "description": "ESLint configuration",
   "license": "MIT",
   "repository": "https://github.com/raviqqe/eslint-config",
+  "type": "module",
+  "main": "dist/index.js",
   "publishConfig": {
     "provenance": true
   },
-  "engines": {
-    "node": ">=24.6.0"
-  },
-  "type": "module",
   "scripts": {
     "build": "tsc",
     "lint": "biome ci",
@@ -35,7 +32,11 @@
     "@types/eslint": "^9.6.1",
     "@types/node": "^25.0.0",
     "eslint": "^9.21.0",
+    "jiti": "^2.6.1",
     "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=25.3.0"
   },
   "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b"
 }
