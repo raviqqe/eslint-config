@@ -1,13 +1,9 @@
 import js from "@eslint/js";
-// @ts-expect-error missing types
 import comments from "@eslint-community/eslint-plugin-eslint-comments/configs";
 import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import importX from "eslint-plugin-import-x";
 import perfectionist from "eslint-plugin-perfectionist";
-// @ts-expect-error missing types
-import reactJsxRuntime from "eslint-plugin-react/configs/jsx-runtime.js";
-// @ts-expect-error missing types
-import reactRecommended from "eslint-plugin-react/configs/recommended.js";
+import react from "eslint-plugin-react";
 import globals from "globals";
 import typescript, { type ConfigWithExtends } from "typescript-eslint";
 
@@ -16,8 +12,9 @@ import typescript, { type ConfigWithExtends } from "typescript-eslint";
 const configurations: ConfigWithExtends[] = [
   js.configs.recommended,
   (comments as { recommended: ConfigWithExtends }).recommended,
-  reactRecommended as ConfigWithExtends,
-  reactJsxRuntime as ConfigWithExtends,
+  ...["recommended", "jsx-runtime"]
+    .map((name) => react.configs.flat[name])
+    .filter((config) => !!config),
   importX.flatConfigs.errors,
   importX.flatConfigs.warnings,
   importX.flatConfigs.typescript,
