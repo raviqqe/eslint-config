@@ -19,12 +19,10 @@ const configurations: ConfigWithExtends[] = [
   importX.flatConfigs.warnings,
   importX.flatConfigs.typescript,
   perfectionist.configs["recommended-natural"],
-  ...typescript.config(
-    ...typescript.configs.recommended,
-    ...typescript.configs.recommendedTypeChecked,
-    ...typescript.configs.stylistic,
-    ...typescript.configs.stylisticTypeChecked,
-  ),
+  ...typescript.configs.recommended,
+  ...typescript.configs.recommendedTypeChecked,
+  ...typescript.configs.stylistic,
+  ...typescript.configs.stylisticTypeChecked,
   {
     languageOptions: {
       globals: {
