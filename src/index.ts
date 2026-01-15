@@ -12,9 +12,15 @@ import typescript, { type ConfigWithExtends } from "typescript-eslint";
 const configurations: ConfigWithExtends[] = [
   js.configs.recommended,
   (comments as { recommended: ConfigWithExtends }).recommended,
-  ...["recommended", "jsx-runtime"]
-    .map((name) => react.configs.flat[name])
-    .filter((config) => !!config),
+  ...["recommended", "jsx-runtime"].map((name) => {
+    const config = react.configs.flat[name];
+
+    if (!config) {
+      throw new Error(`React config "${name}" not found.`);
+    }
+
+    return config;
+  }),
   importX.flatConfigs.errors,
   importX.flatConfigs.warnings,
   importX.flatConfigs.typescript,
