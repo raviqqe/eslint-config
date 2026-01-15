@@ -1,6 +1,6 @@
 {
   "name": "@raviqqe/eslint-config",
-  "version": "5.0.3",
+  "version": "5.0.4",
   "description": "ESLint configuration",
   "license": "MIT",
   "repository": "https://github.com/raviqqe/eslint-config",
