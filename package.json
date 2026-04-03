@@ -33,7 +33,7 @@
     "@types/node": "^25.0.0",
     "eslint": "^9.21.0",
     "jiti": "^2.6.1",
-    "typescript": "^5.8.2"
+    "typescript": "^6.0.2"
   },
   "engines": {
     "node": ">=25.3.0"
