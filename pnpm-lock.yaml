@@ -202,7 +202,7 @@ importers:
         version: 2.0.27(@biomejs/biome@2.5.15)
       '@raviqqe/tsconfig':
         specifier: ^3.0.0
-        version: 3.0.2
+        version: 3.0.3
       '@types/eslint':
         specifier: ^9.6.1
         version: 9.6.1
@@ -366,9 +366,9 @@ packages:
     peerDependencies:
       '@biomejs/biome': ^2.1.4
 
-  '@raviqqe/tsconfig@3.0.2':
-    resolution: {integrity: sha512-san+p1rO62JSKwb7F2hbjoY3EtPhC4qiQM9DNpE+pAIguQRlNurfVpm6KNlIuc+WY0e2cS3X7H2EMJ+PZaRtZw==}
-    engines: {node: '>=25.8.0'}
+  '@raviqqe/tsconfig@3.0.3':
+    resolution: {integrity: sha512-P4bDrLxHpQi4AzWg61XExTMOj80x16eHUKtuAlKdLaV+fe6uLjBPey10v5OXgcHnpyVB72SnjMtHuwJjX92Byg==}
+    engines: {node: '>=26.5.0'}
 
   '@tybys/wasm-util@0.10.3':
     resolution: {integrity: sha512-F3fo1MYrRJYL3zER0OUOmkutjr1Vp23m7OsSgp7nq4SP6OqX6C/56XFIPAl5bt3zaBRjmW7SGz3u/6LwFpYcOg==}
@@ -1729,7 +1729,7 @@ snapshots:
     dependencies:
       '@biomejs/biome': 2.5.15
 
-  '@raviqqe/tsconfig@3.0.2':
+  '@raviqqe/tsconfig@3.0.3':
     dependencies:
       typescript: 7.0.2
 
