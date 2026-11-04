@@ -195,10 +195,10 @@ importers:
         version: 8.72.1(eslint@9.39.5(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@6.0.3)
     devDependencies:
       '@biomejs/biome':
-        specifier: ^2.1.4
+        specifier: ^2.6.4
         version: 2.6.4
       '@raviqqe/biome-config':
-        specifier: ^2.0.4
+        specifier: ^2.0.29
         version: 2.0.29(@biomejs/biome@2.6.4)
       '@raviqqe/tsconfig':
         specifier: ^3.0.0
