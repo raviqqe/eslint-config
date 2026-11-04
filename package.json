@@ -26,8 +26,8 @@
     "typescript-eslint": "^8.26.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.1.4",
-    "@raviqqe/biome-config": "^2.0.4",
+    "@biomejs/biome": "^2.6.4",
+    "@raviqqe/biome-config": "^2.0.29",
     "@raviqqe/tsconfig": "^3.0.0",
     "@types/eslint": "^9.6.1",
     "@types/node": "^26.0.0",
